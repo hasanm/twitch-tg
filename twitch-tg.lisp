@@ -15,9 +15,9 @@
 
 (defun my-pop (n)
   (let ((new-list *the-queue*))
-    (loop for item in new-list 
-       for i from 1 to n         
-       do (pop *the-queue*))))
+    (loop for i from 1 to n         
+       do (if (> (length *the-queue*) 0)
+           (pop *the-queue*)))))
 
 (defun start-server (port)
   ;; (stop-server)
