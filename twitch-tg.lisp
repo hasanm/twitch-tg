@@ -66,7 +66,8 @@
            (= (length n) 1)
            (cl-ppcre:scan "[1-9]" n))
       (let ((m (parse-integer n)))
-        (my-pop m)))
+        (my-pop m))
+      (my-pop 1))
       (format nil "~%")))
 
 
