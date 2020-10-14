@@ -61,12 +61,13 @@
 
 
 (define-easy-handler (pop-list :uri "/pop-list") (n)
-  (if (and n
+  (let () 
+    (if (and n
            (= (length n) 1)
            (cl-ppcre:scan "[1-9]" n))
       (let ((m (parse-integer n)))
         (my-pop m)))
-      (format nil ""))
+      (format nil "~%")))
 
 
 
