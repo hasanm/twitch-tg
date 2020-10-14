@@ -75,7 +75,7 @@
       (let ()
         (my-pop 1)
         (setf out 1)))
-      (format nil "Popped => " (print-the-queue))))
+      (format nil "Popped => ~a" (print-the-queue))))
 
 
 
